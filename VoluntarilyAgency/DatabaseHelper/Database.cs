@@ -6,18 +6,15 @@ using System.Threading.Tasks;
 
 namespace VoluntarilyAgency.DatabaseHelper
 {
-    public abstract class DatabaseBase
+    public class Database
     {
         private SqlConnectionStringBuilder _builder = new SqlConnectionStringBuilder();
-        public DatabaseModel Model { get; set; }
 
         public string Table { get; set; }
 
-        public DatabaseBase(string table)
+        public Database()
         {
-            Table = table;
             CreateConnectionString();
-            Model = new DatabaseModel(Table);
         }
 
         private void CreateConnectionString()
@@ -28,28 +25,9 @@ namespace VoluntarilyAgency.DatabaseHelper
             _builder.InitialCatalog = "agency";
         }
 
-        protected SqlConnection GetConnection()
+        public SqlConnection GetConnection()
         {
             return new SqlConnection(_builder.ConnectionString);
         }
-
-        protected abstract void AddModel();
-    }
-
-    public class DatabaseModel
-    {
-        public string Id { get; set; }
-        public List<string> Columns = new List<string>();
-
-        public DatabaseModel(string table)
-        {
-            Id = table + "_id";
-        }
-
-        public void AddColumns(List<string> columns)
-        {
-            Columns = columns;
-        }
-
     }
 }
