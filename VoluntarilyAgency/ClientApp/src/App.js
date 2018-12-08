@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import Layout from "./components/Layout/Layout";
-import GoogleMap from "./components/GoogleMap/GoogleMap";
-
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Dashboard from "./components/Dashboard/Dashboard";
+
+import Layout from "./components/Layout";
+import GoogleMap from "./components/GoogleMap";
+import Dashboard from "./components/Dashboard";
+import LeaderBoard from "./components/LeaderBoard";
 
 class App extends Component {
     componentWillMount() {
@@ -36,6 +37,7 @@ class App extends Component {
                         >
                             <Route exact path="/" component={Dashboard} />
                             <Route path="/map" component={GoogleMap} />
+                            <Route path="/leaderboard" component={LeaderBoard} />
                         </div>
                     </Router>
                 </Layout>

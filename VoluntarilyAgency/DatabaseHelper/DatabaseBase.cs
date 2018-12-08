@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace VoluntarilyAgency.DatabaseHelper
 {
-    public class DatabaseBase
+    public abstract class DatabaseBase
     {
         private SqlConnectionStringBuilder _builder = new SqlConnectionStringBuilder();
+        public DatabaseModel Model { get; set; }
 
         public string Table { get; set; }
 
@@ -16,6 +17,7 @@ namespace VoluntarilyAgency.DatabaseHelper
         {
             Table = table;
             CreateConnectionString();
+            Model = new DatabaseModel(Table);
         }
 
         private void CreateConnectionString()
@@ -29,6 +31,24 @@ namespace VoluntarilyAgency.DatabaseHelper
         protected SqlConnection GetConnection()
         {
             return new SqlConnection(_builder.ConnectionString);
+        }
+
+        protected abstract void AddModel();
+    }
+
+    public class DatabaseModel
+    {
+        public string Id { get; set; }
+        public List<string> Columns = new List<string>();
+
+        public DatabaseModel(string table)
+        {
+            Id = table + "_id";
+        }
+
+        public void AddColumns(List<string> columns)
+        {
+            Columns = columns;
         }
 
     }
