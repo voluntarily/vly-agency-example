@@ -6,6 +6,7 @@ export default class Interactions extends Component {
 
     return (
       <div>
+        <h1>Interactions</h1>
       </div>
     );
   }
