@@ -10,7 +10,8 @@ export default class Dashboard extends Component {
           background: "#ddd"
         }}
       >
-        <h1>Lorem bla bla</h1>
+        <h1 style={{
+        padding : "20px"}}>Kia Ora! Here are todays stats</h1>
         <div
           style={{
             height: 300,

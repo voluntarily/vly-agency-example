@@ -13,7 +13,7 @@ export default class Navbar extends Component {
         <span style={{
           flex: '0 0 10%',
 
-        }}><img src={logo} /></span>
+        }}><img style={{height:"50px"}} src={logo} /></span>
         <ul style={{
           listStyleType: 'none',
           marginLeft: 'auto',
@@ -34,7 +34,8 @@ export default class Navbar extends Component {
             display: 'inline-block',
             height: '100%',
             padding: '0 10px'
-          }}>PROFILE</li>
+            }}>PROFILE</li>
+
         </ul>
       </div>
     )
