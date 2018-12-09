@@ -14,7 +14,7 @@ namespace VoluntarilyAgency.Controllers
     [ApiController]
     public class DataController : ControllerBase
     {
-        [HttpPut("[action]")]
+        [HttpPost("[action]")]
         public void GenerateWorkedData(int number)
         {
             Database database = new Database();
