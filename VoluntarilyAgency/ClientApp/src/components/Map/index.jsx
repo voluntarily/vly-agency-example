@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PowerbiEmbedded from 'react-powerbi';
-
+import img from "../../images/map.png";
 
  
 export default class Map extends Component {
@@ -15,7 +15,10 @@ export default class Map extends Component {
             <iframe style ={{  
                         padding: "20px",
                         margin: "20px"}} height="700px" width="100%" src="https://app.powerbi.com/view?r=eyJrIjoiZDUzZGNiNWItOGNjNi00OWFiLWE1MGYtNDViZGE5OWUwZjMzIiwidCI6IjIzNGMwNzY4LTQ3NTQtNDE0ZS1hNmQ1LWUzODY1NjI4YTQ3ZCJ9" frameborder="0" allowFullScreen="true"></iframe>
-            <div></div>
+            <div>
+                        <img style={{height: "100%", width: "100%"}} src={img}/>
+
+            </div>
         </div>
     );
   }

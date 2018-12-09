@@ -1,4 +1,5 @@
-﻿import React, { Component } from 'react';
+import React, { Component } from 'react';
+import img from "../../images/inter.jpeg";
 import Gallery from 'react-grid-gallery';
 import img1 from '../../images/20181209_112114.jpg'
 import img2 from '../../images/Classroom-Students-Teacher-Feature-Image-e1535388740402.jpg'
@@ -51,11 +52,16 @@ const IMAGES =
 ]
 
 export default class Interactions extends Component {
-
-
  render() {
 
     return (
+      <div
+      style ={{ 
+                padding: "20px",
+                margin: "20px"}}>
+                
+        <img style={{height: "750px", width: "100%"}} src={img}/>
+
       <div>
         <h1>Interactions</h1>
         {/* <Gallery images={IMAGES}/> */}
