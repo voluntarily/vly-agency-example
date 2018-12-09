@@ -3,14 +3,29 @@ import ReactTable from "react-table";
 import "./tablecss.css";
 
 export default class LeaderBoard extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            tableData: {}
+        };
+    }
+    
+    componentWillMount(){
+        fetch("api/company/LeaderBoard")
+        .then(data => {  
+            console.log(data)
+        })
+    }
+    
     render() {
+        
         return (
             <div>
                 <h1>{"Leaderboard"}</h1>
                 <div style ={{  
                         padding: "20px",
                         margin: "20px"}}>
-                    <ReactTable   
+                    <ReactTable
                       columns={[
                         {
                           Header: "Leaderboard",
@@ -36,7 +51,13 @@ export default class LeaderBoard extends Component {
                               Header: "Days Pledged (Persoal)",
                               id: "daysPledged",
      
+                            },
+                            {
+                              Header: "Points",
+                              id: "points",
+     
                             }
+                            
                           ]
                         }
                        
