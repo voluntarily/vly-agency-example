@@ -10,13 +10,6 @@ import Interactions from "./components/Interactions";
 
 class App extends Component {
     componentWillMount() {
-        console.log("data");
-        fetch('api/SampleData/WeatherForecasts')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-                this.setState({ forecasts: data, loading: false });
-            });
     }
     render() {
         return (
