@@ -6,15 +6,20 @@ export default class LeaderBoard extends Component {
     constructor(props){
         super(props);
         this.state = {
-            tableData: {}
+            tableData: []
         };
     }
     
     componentWillMount(){
-        fetch("api/company/LeaderBoard")
-        .then(data => {  
-            console.log(data)
-        })
+        fetch('api/Company')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                console.log(data[0])
+                this.setState({
+                    tableData: data
+                })
+            });
     }
     
     render() {
@@ -31,31 +36,28 @@ export default class LeaderBoard extends Component {
                           Header: "Leaderboard",
                           columns: [
                             {
-                              Header: "Rank",
-                              accessor: "rank"
-                            },
-                            {
                               Header: "Company",
                               id: "company",
+                              accessor: "company_name"
                             },
                              {
                               Header: "Impact Rating",
                               id: "rating",
-     
                             },
                              {
                               Header: "Days Pledged",
-                              id: "daysPledged",
+                              id: "company_hours",
                             },
                              {
                               Header: "Days Pledged (Persoal)",
                               id: "daysPledged",
+                              accessor: "employee_hours"
      
                             },
                             {
                               Header: "Points",
                               id: "points",
-     
+                              accessor: "points"
                             }
                             
                           ]
@@ -65,6 +67,7 @@ export default class LeaderBoard extends Component {
                       ]}
                       defaultPageSize={15}
                       className="-striped -highlight"
+                        data={this.state.tableData}
                     />
                  </div>
                 
