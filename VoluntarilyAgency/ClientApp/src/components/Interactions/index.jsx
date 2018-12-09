@@ -5,6 +5,7 @@ import img2 from '../../images/Classroom-Students-Teacher-Feature-Image-e1535388
 import img3 from '../../images/ClassroomGameBlog.jpg'
 import img4 from '../../images/social_image.jpg'
 import img5 from '../../images/students-listening-female-teacher-classroom-260nw-778983088.jpg'
+import {UserCard} from 'react-ui-cards';
 
 const IMAGES =
 [{
@@ -57,7 +58,48 @@ export default class Interactions extends Component {
     return (
       <div>
         <h1>Interactions</h1>
-        <Gallery images={IMAGES}/>
+        {/* <Gallery images={IMAGES}/> */}
+        <UserCard
+          cardClass='float'
+          header={img5}
+          avatar={img1}
+          name='Vodafone'
+          positionName='Helping School'
+          stats={[
+            {
+              name: 'hours',
+              value: 21
+            },
+            {
+              name: 'students',
+              value: 37
+            },
+            {
+              name: 'posts',
+              value: 117
+            }
+          ]}
+        /><UserCard
+        cardClass='float'
+        header={img2}
+        avatar={img3}
+        name='Datacom'
+        positionName='STEM'
+        stats={[
+          {
+            name: 'hours',
+            value: 23
+          },
+          {
+            name: 'students',
+            value: 45
+          },
+          {
+            name: 'posts',
+            value: 117
+          }
+        ]}
+      />
       </div>
     );
   }
