@@ -11,7 +11,7 @@ export default class Dashboard extends Component {
         }}
       >
         <h1 style={{
-        padding : "20px"}}>Kia Ora! Here are todays stats</h1>
+        padding : "20px"}}>THE BIG NUMBERS</h1>
         <div
           style={{
             height: 300,
@@ -29,7 +29,7 @@ export default class Dashboard extends Component {
             }}
           >
             <div style={{ color: "grey", marginLeft: 20, marginTop: 10 }}>
-              Hours
+              <h1>Volunteer hours</h1>
             </div>
             <div
               style={{
@@ -39,7 +39,7 @@ export default class Dashboard extends Component {
                 marginLeft: 20
               }}
             >
-              129
+              {Math.floor((Math.random() * 1000) + 1000)}
             </div>
             <button
               style={{
@@ -62,7 +62,7 @@ export default class Dashboard extends Component {
             }}
           >
                       <div style={{ color: "grey", marginLeft: 20, marginTop: 10 }}>
-              Hours
+              Total Students
             </div>
             <div
               style={{
@@ -72,7 +72,7 @@ export default class Dashboard extends Component {
                 marginLeft: 20
               }}
             >
-              129
+               {Math.floor((Math.random() * 100) + 1)}
             </div>
             <button
               style={{
@@ -101,7 +101,7 @@ export default class Dashboard extends Component {
             }}
           >
                       <div style={{ color: "grey", marginLeft: 20, marginTop: 10 }}>
-              Hours
+              Schools
             </div>
             <div
               style={{
@@ -111,7 +111,7 @@ export default class Dashboard extends Component {
                 marginLeft: 20
               }}
             >
-              129
+               {Math.floor((Math.random() * 100) + 1)}
             </div>
             <button
               style={{
@@ -133,7 +133,7 @@ export default class Dashboard extends Component {
             }}
           >
                       <div style={{ color: "grey", marginLeft: 20, marginTop: 10 }}>
-              Hours
+              Programmes
             </div>
             <div
               style={{
@@ -143,7 +143,7 @@ export default class Dashboard extends Component {
                 marginLeft: 20
               }}
             >
-              129
+               {Math.floor((Math.random() * 100) + 1)}
             </div>
             <button
               style={{
@@ -164,7 +164,7 @@ export default class Dashboard extends Component {
             }}
           >
                       <div style={{ color: "grey", marginLeft: 20, marginTop: 10 }}>
-              Hours
+              Volunteers
             </div>
             <div
               style={{
@@ -174,7 +174,7 @@ export default class Dashboard extends Component {
                 marginLeft: 20
               }}
             >
-              129
+               {Math.floor((Math.random() * 100) + 30)}
             </div>
             <button
               style={{
