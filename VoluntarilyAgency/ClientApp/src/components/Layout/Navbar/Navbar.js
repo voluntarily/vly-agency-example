@@ -9,11 +9,12 @@ export default class Navbar extends Component {
         background: '#ff5d00',
         display: 'flex',
         alignItems: 'stretch'
+    
       }}>
         <span style={{
           flex: '0 0 10%',
 
-        }}><img style={{height:"50px"}} src={logo} /></span>
+        }}> <a href="/"><img style={{height:"50px"}} src={logo}  /></a></span>
         <ul style={{
           listStyleType: 'none',
           marginLeft: 'auto',
@@ -35,6 +36,12 @@ export default class Navbar extends Component {
             height: '100%',
             padding: '0 10px'
             }}>PROFILE</li>
+          <a  href = "https://voluntari.ly/"><li style={{
+            display: 'inline-block',
+            height: '100%',
+            padding: '0 10px'
+            }}>voluntari.ly</li></a>
+           
 
         </ul>
       </div>
