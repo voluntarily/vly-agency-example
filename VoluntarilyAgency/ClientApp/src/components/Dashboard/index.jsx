@@ -11,7 +11,7 @@ export default class Dashboard extends Component {
         }}
       >
         <h1 style={{
-        padding : "20px"}}>THE BIG NUMBERS</h1>
+        padding : "20px", fontSize:"100px"}}>THE BIG NUMBERS</h1>
         <div
           style={{
             height: 300,
@@ -41,16 +41,7 @@ export default class Dashboard extends Component {
             >
               {Math.floor((Math.random() * 1000) + 1000)}
             </div>
-            <button
-              style={{
-                background: "orange",
-                padding: 10,
-                marginTop: 40,
-                marginLeft: 20
-              }}
-            >
-              View Details
-            </button>
+            
           </div>
           <div
             style={{
@@ -62,7 +53,7 @@ export default class Dashboard extends Component {
             }}
           >
                       <div style={{ color: "grey", marginLeft: 20, marginTop: 10 }}>
-              Total Students
+              <h1>Total Students</h1>
             </div>
             <div
               style={{
@@ -72,18 +63,9 @@ export default class Dashboard extends Component {
                 marginLeft: 20
               }}
             >
-               {Math.floor((Math.random() * 100) + 1)}
+               {Math.floor((Math.random() * 100) + 350)}
             </div>
-            <button
-              style={{
-                background: "orange",
-                padding: 10,
-                marginTop: 40,
-                marginLeft: 20
-              }}
-            >
-              View Details
-            </button></div>
+            </div>
         </div>
         <div
           style={{
@@ -101,7 +83,7 @@ export default class Dashboard extends Component {
             }}
           >
                       <div style={{ color: "grey", marginLeft: 20, marginTop: 10 }}>
-              Schools
+              <h1>Schools</h1>
             </div>
             <div
               style={{
@@ -113,16 +95,7 @@ export default class Dashboard extends Component {
             >
                {Math.floor((Math.random() * 100) + 1)}
             </div>
-            <button
-              style={{
-                background: "orange",
-                padding: 10,
-                marginTop: 10,
-                marginLeft: 20
-              }}
-            >
-              View Details
-            </button>
+            
           </div>
           <div
             style={{
@@ -133,7 +106,7 @@ export default class Dashboard extends Component {
             }}
           >
                       <div style={{ color: "grey", marginLeft: 20, marginTop: 10 }}>
-              Programmes
+              <h1>Programmes</h1>
             </div>
             <div
               style={{
@@ -145,16 +118,7 @@ export default class Dashboard extends Component {
             >
                {Math.floor((Math.random() * 100) + 1)}
             </div>
-            <button
-              style={{
-                background: "orange",
-                padding: 10,
-                marginTop: 10,
-                marginLeft: 20
-              }}
-            >
-              View Details
-            </button></div>
+            </div>
           <div
             style={{
               flex: 1,
@@ -164,7 +128,7 @@ export default class Dashboard extends Component {
             }}
           >
                       <div style={{ color: "grey", marginLeft: 20, marginTop: 10 }}>
-              Volunteers
+              <h1>Volunteers</h1>
             </div>
             <div
               style={{
@@ -176,16 +140,7 @@ export default class Dashboard extends Component {
             >
                {Math.floor((Math.random() * 100) + 30)}
             </div>
-            <button
-              style={{
-                background: "orange",
-                padding: 10,
-                marginTop: 10,
-                marginLeft: 20
-              }}
-            >
-              View Details
-            </button></div>
+            </div>
         </div>
       </div>
     );
