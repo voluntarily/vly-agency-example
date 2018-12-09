@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Layout from "./components/Layout";
-import GoogleMap from "./components/GoogleMap";
+import Map from "./components/Map/";
 import Dashboard from "./components/Dashboard";
 import LeaderBoard from "./components/LeaderBoard";
+import Interactions from "./components/Interactions";
+
 
 class App extends Component {
     componentWillMount() {
@@ -29,8 +31,10 @@ class App extends Component {
                             }}
                         >
                             <Route exact path="/" component={Dashboard} />
-                            <Route path="/map" component={GoogleMap} />
+                            <Route path="/map" component={Map} />
                             <Route path="/leaderboard" component={LeaderBoard} />
+                            <Route path="/interactions" component={Interactions} />
+
                         </div>
                     </Router>
                 </Layout>
