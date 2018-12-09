@@ -11,7 +11,7 @@ export default class Dashboard extends Component {
         }}
       >
         <h1 style={{
-        padding : "20px", fontSize:"100px"}}>THE BIG NUMBERS</h1>
+        padding : "20px", fontSize:"75px"}}>The big numbers!</h1>
         <div
           style={{
             height: 300,
